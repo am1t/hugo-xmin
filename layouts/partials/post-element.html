@@ -1,0 +1,16 @@
+<li>
+    <article>
+        {{ if .Title }}
+            <div class="article-meta">
+                <h1><span class="title">{{ .Title | markdownify }}</span></h1>
+                {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "January 02, 2006" }}</h2>{{ end }}
+            </div>
+        {{ else }}
+            {{ if (gt .Params.date 0) }}<h3 class="date">{{ .Date.Format "January 02, 2006" }}</h2>{{ end }}
+        {{ end }}
+        <main>
+        {{ .Content }}
+        </main>
+    </article>
+</li>
+<hr>

@@ -1,9 +1,5 @@
   <footer>
-  {{ partial "foot_custom.html" . }}
-  {{ with .Site.Params.footer }}
-  <hr/>
-  {{ replace . "{Year}" now.Year | markdownify}}
-  {{ end }}
+    &copy; [{{ .Site.Author.username }}]({{ "/" | absURL }}) {{ now.Year | markdownify }}
   </footer>
   </body>
 </html>
