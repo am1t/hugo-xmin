@@ -11,9 +11,10 @@ li.post-item { list-style: none; }
 hr { border-style: dashed; color: #ddd; }
 
 /* header and footer areas */
-h1.site-title a  { font-size: 3em; text-align: center; color: text; text-decoration: none; }
+.site-title { font-size: 56px; text-align: center; }
+h1.site-title a  { color: text; text-decoration: none; }
 .menu { padding: 0; }
-.menu li { display: inline-block; }
+.menu li { display: inline-block; margin: 5px auto; }
 .article-meta, .menu a { text-decoration: none; background: #eee; padding: 5px 10px; border-radius: 5px; }
 .menu, .article-meta, footer { text-align: center; }
 h1, a.title { font-size: 32px; }
@@ -53,7 +54,7 @@ th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
 
 @media only screen and (max-width: 500px) {
-  .site-title { font-size: 2em; }
+  .site-title { font-size: 32px; }
   h1, a.title { font-size: 24px; }
   h2, h3 { font-size: 18px; }  
 }
