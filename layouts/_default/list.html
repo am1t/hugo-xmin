@@ -7,7 +7,13 @@
 {{ .Content }}
 
 <ul>
-  {{ partial "post-element.html" . }}
+  {{ $pages := .Pages }}
+  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+  {{ range (where $pages "Section" "!=" "") }}
+  <li>
+    {{ partial "post-element.html" . }}
+  </li>
+  {{ end }}
 </ul>
 
 {{ partial "footer.html" . }}
