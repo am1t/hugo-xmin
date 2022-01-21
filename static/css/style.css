@@ -5,14 +5,14 @@ body {
   line-height: 1.5;
 }
 
-a { color: #0176D3; }
+a { color: #6d28d9; }
 .post-list { width: 90%; margin: auto; padding-inline-start: 0px; }
 li.post-item { list-style: none; }
 hr { border-style: dashed; color: #ddd; }
 
 /* header and footer areas */
 .site-title { font-size: 56px; text-align: center; }
-h1.site-title a  { color: text; text-decoration: none; }
+h1.site-title a  { color: initial; text-decoration: none; }
 .menu { padding: 0; }
 .menu li { display: inline-block; margin: 5px auto; }
 .article-meta, .menu a { text-decoration: none; background: #eee; padding: 5px 10px; border-radius: 5px; }
@@ -20,7 +20,7 @@ h1.site-title a  { color: text; text-decoration: none; }
 h1, a.title { font-size: 32px; }
 h2 { font-size: 24px;}
 h3 { font-size: 18px; }
-h1, h2 { margin-block: 8px; margin-inline: 8px; }
+h1, h2 { margin-block: 8px; }
 footer { margin-top: 64px; border-top: 1px solid; padding: 24px; }
 footer a { text-decoration: none; }
 
@@ -57,4 +57,13 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
   .site-title { font-size: 32px; }
   h1, a.title { font-size: 24px; }
   h2, h3 { font-size: 18px; }  
+}
+
+@media(prefers-color-scheme: dark) {
+  body { background-color: #27272A; color: #eee; }
+  h1.site-title a {color: #eee;}
+  a { color: #a78bfa; }
+  blockquote, th, tr:nth-child(2n), .article-meta, .menu a { color: #27272A; }
+  hr { border-style: solid; color: #eee; border-width: 0.1px; width: 50%; margin: 40px auto; }
+  pre{ box-shadow: 5px 5px 5px #27272a; }
 }

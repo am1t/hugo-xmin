@@ -9,7 +9,7 @@
 <ul class="post-list">
   {{ $pages := .Pages }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{ range (where $pages "Section" "!=" "") }}
+  {{ range (where $pages "Type" "post") }}
     {{ partial "post-element.html" . }}
   {{ end }}
 </ul>
